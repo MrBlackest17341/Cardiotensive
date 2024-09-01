@@ -1,0 +1,426 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Стили для шапки */
+header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-container h2:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation li:hover {
+    transform: scale(1.05);
+}
+
+.navigation ul li {
+    margin: 0;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    color: #007BFF;
+}
+
+/* Гамбургер-меню */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner img {
+    width: 400px;
+    height: auto;
+    margin-right: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner img:hover {
+    transform: scale(1.1);
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #000000;
+}
+
+.text-content p {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.text-content p span {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Advantages */
+.feature {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature:hover {
+    transform: scale(1.03);
+}
+
+.feature img:hover {
+    transform: scale(1.05);
+}
+
+/* Заголовок секции */
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Стили для секции about */
+.about {
+    padding: 30px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Стили для секции reviews */
+.reviews {
+    padding: 30px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.review p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.review:hover {
+    transform: scale(1.03);
+}
+
+/* Стили для формы контактов */
+.contact-form {
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"] {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="tel"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation ul.show {
+        display: flex;
+    }
+
+    .navigation ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .banner img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-content h2 {
+        text-align: center;
+    }
+
+    .text-content p {
+        text-align: center;
+    }
+
+    .about {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .feature img {
+        width: 100px;
+    }
+
+    .feature h3 {
+        font-size: 18px;
+    }
+
+    .feature p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .reviews {
+        padding: 20px;
+    }
+
+    .review {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .review img {
+        width: 70px;
+    }
+
+    .review h4 {
+        font-size: 16px;
+    }
+
+    .review p {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"],
+    .contact-form button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navigation {
+        justify-content: flex-end;
+    }
+
+    .navigation ul {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0;
+        width: auto;
+        text-align: left;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .contact-form {
+        padding: 40px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"],
+    .contact-form button {
+        font-size: 16px;
+    }
+}
