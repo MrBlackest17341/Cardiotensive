@@ -70,6 +70,10 @@ header {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    color: #333;
 }
 
 /* Banner */
@@ -271,156 +275,17 @@ header {
     background-color: #0056b3;
 }
 
-/* Адаптивные стили */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        max-height: 40px;
-        margin-bottom: 10px;
-    }
-
-    .navigation {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .navigation ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        border-radius: 8px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .navigation ul.show {
-        display: flex;
-    }
-
-    .navigation ul li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .banner img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .text-content h2 {
-        text-align: center;
-    }
-
-    .text-content p {
-        text-align: center;
-    }
-
-    .about {
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .feature img {
-        width: 100px;
-    }
-
-    .feature h3 {
-        font-size: 18px;
-    }
-
-    .feature p {
-        font-size: 14px;
-    }
-
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    .reviews {
-        padding: 20px;
-    }
-
-    .review {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .review img {
-        width: 70px;
-    }
-
-    .review h4 {
-        font-size: 16px;
-    }
-
-    .review p {
-        font-size: 14px;
-    }
-
-    .contact-form {
-        padding: 20px;
-        margin: 20px;
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="tel"],
-    .contact-form button {
-        font-size: 14px;
-        padding: 12px;
-    }
+/* Thank you page */
+.thank-you {
+    text-align: center;
+    padding: 50px;
 }
 
-@media (min-width: 769px) {
-    .header-container {
-        flex-direction: row;
-        align-items: center;
-    }
+.thank-you h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
 
-    .navigation {
-        justify-content: flex-end;
-    }
-
-    .navigation ul {
-        display: flex;
-        position: static;
-        background-color: transparent;
-        box-shadow: none;
-        padding: 0;
-        border-radius: 0;
-        width: auto;
-        text-align: left;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .contact-form {
-        padding: 40px;
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="tel"],
-    .contact-form button {
-        font-size: 16px;
-    }
+.thank-you p {
+    font-size: 18px;
 }
