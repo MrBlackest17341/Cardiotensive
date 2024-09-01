@@ -22,26 +22,19 @@ header {
     position: relative;
 }
 
-.header-container h2 {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
 .header-container h2:hover {
+    cursor: pointer;
     transform: scale(1.05);
 }
 
 .logo {
     height: 200px;
     width: 200px;
-    transition: width 0.3s ease;
 }
 
-/* Навигационное меню */
 .navigation {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .navigation ul {
@@ -52,7 +45,15 @@ header {
     gap: 20px;
 }
 
-.navigation li a {
+.navigation li:hover {
+    transform: scale(1.05);
+}
+
+.navigation ul li {
+    margin: 0;
+}
+
+.navigation ul li a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -60,7 +61,7 @@ header {
     transition: color 0.3s ease;
 }
 
-.navigation li a:hover {
+.navigation ul li a:hover {
     color: #007BFF;
 }
 
@@ -72,42 +73,6 @@ header {
     background: none;
     border: none;
     padding: 10px;
-    color: #333;
-}
-
-/* Стили для выпадающего меню */
-.navigation-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 80px; /* Adjust based on header height */
-    right: 0;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none;
-}
-
-.navigation-menu.active {
-    display: flex;
-}
-
-.navigation-menu ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-}
-
-.navigation-menu ul li {
-    border-bottom: 1px solid #eee;
-}
-
-.navigation-menu ul li a {
-    font-size: 18px;
-    padding: 10px;
-    display: block;
     color: #333;
 }
 
@@ -325,12 +290,45 @@ header {
     font-size: 18px;
 }
 
-/* Мобильные стили */
+/* Responsive */
+@media (max-width: 1440px) {
+    .header-container {
+        padding: 20px;
+    }
+
+    .logo {
+        height: 180px;
+        width: 180px;
+    }
+
+    .navigation ul {
+        gap: 15px;
+    }
+
+    .text-content h2 {
+        font-size: 24px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner img {
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    .feature {
+        width: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
     }
 
     .logo {
@@ -348,25 +346,49 @@ header {
 
     .navigation-menu {
         display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
     }
 
     .navigation-menu.active {
-        display: flex;
+        display: block;
     }
 
     .navigation-menu ul {
         flex-direction: column;
-        padding: 0;
+        padding: 10px;
     }
 
     .navigation-menu ul li {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #ddd;
     }
 
-    .navigation-menu ul li a {
-        font-size: 18px;
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"] {
         padding: 10px;
-        display: block;
-        color: #333;
+    }
+
+    .contact-form button {
+        padding: 10px;
     }
 }
