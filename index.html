@@ -9,19 +9,20 @@
 <body>
     <!-- Header -->
     <header>
-      <div class="header-container">
-        <h2>CARDIOTENSIVE</h2>
-        <img class="logo" src="photo/Cardiotensive Мокап.png" alt="Cardiotensive Logo">
-        <nav class="navigation">
-            <ul>
-                <li><a href="#about">О продукте</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
+        <div class="header-container">
+            <h2>CARDIOTENSIVE</h2>
+            <img class="logo" src="photo/Cardiotensive Мокап.png" alt="Cardiotensive Logo">
             <div class="hamburger">&#9776;</div>
-        </nav>
-      </div>
-    </header>
+            <nav class="navigation navigation-menu" id="navMenu">
+                <ul>
+                    <li><a href="#about">О продукте</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    
   
     <!-- Product Description -->
     <section class="banner">
@@ -83,7 +84,7 @@
     <section id="contacts">
         <h2 class="section-title">Связаться с нами</h2>
         <div class="contact-form">
-            <form id="contactForm" action="./thank-you/thank-you.html" method="POST">
+            <form id="contactForm" action="thank-you.html" method="POST">
                 <input type="text" name="name" placeholder="Имя" required>
                 <input type="tel" name="phone" placeholder="Телефон" required>
                 <button type="submit">Отправить</button>
@@ -91,7 +92,17 @@
          </div>
     </section>    
 
-    <!-- Подключение JavaScript -->
-    <script src="index.js"></script>
+    <!-- Js -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.navigation-menu'); 
+
+    hamburger.addEventListener('click', function () {
+        menu.classList.toggle('active');
+    });
+});
+
+    </script>
 </body>
 </html>
